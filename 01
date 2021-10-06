@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main(){
-  int value
-  value = 10
-  printf(value)
+  int value = 10
+  printf("value",%df);
+  
+  rerutn 0;
 }
