@@ -1,7 +1,16 @@
 #include <stdio.h>
-int main(){
-  int value = 10
-  printf("%d", value);
+int main(int argc, char** argv){
+  for(int i=0;i<argc;i++){
+    printf("%s\n", argv[i]);
+  }
+  
+  FILE*fp = fopen(fname, "r");
+  if(fp == NULL) 
+  
+  char buf[0xff];
+  while(fgets(buf, 0xff, fp) != NULL)
+  
+  fclose(fp);
   
   rerutn 0;
 }
