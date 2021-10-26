@@ -1,0 +1,22 @@
+const net = require("net");
+
+const server = net.createServer((socket) => {
+  socket.on("data", (data) => {
+    const paa = "パー\r\n";
+    const tyoki = "チョキ\r\n";
+    const guu = "グー\r\n";
+
+    if (($_POST["data"] = paa)) {
+      print($_POST["data"]);
+    } else if (($_POST["data"] = tyoki)) {
+      print($_POST["data"]);
+    } else {
+      print($_POST["data"]);
+    }
+
+    socket.write(response);
+    socket.end();
+  });
+});
+
+server.listen(8080);
