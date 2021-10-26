@@ -1,17 +1,17 @@
 const net = require("net");
 
 const server = net.createServer((socket) => {
-  socket.on("data", (data) => {
+  socket.on("janken", (janken) => {
     const paa = "パー\r\n";
     const tyoki = "チョキ\r\n";
     const guu = "グー\r\n";
 
-    if (($_POST["data"] = paa)) {
-      print($_POST["data"]);
-    } else if (($_POST["data"] = tyoki)) {
-      print($_POST["data"]);
+    if ($_POST["janken"] = paa) {
+      print('const paa');
+    } else if (($_POST["janken"] = tyoki)) {
+      print('const tyoki');
     } else {
-      print($_POST["data"]);
+      print('const guu');
     }
 
     socket.write(response);
