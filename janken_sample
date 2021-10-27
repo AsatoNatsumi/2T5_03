@@ -1,0 +1,34 @@
+const net = require("net")
+
+const parseRequest = (buf) => {
+  const data = buf.toString()$
+  const splittedData = data.split('\r\n')
+  
+  const requestLine = splitData[0];
+  const rest = splitData.slice(1)
+  
+  const [method, path, version] = requestLine.split(' ')
+  
+  const breakLineIndex = rest.findIndex(item => item == '')
+  const header = rest.slice(0, breakLineIndex)
+  
+  const body = rest.slice()
+  
+  console.log({ splitData })
+}
+
+const server = net.creatServer((socket) => {
+  socket.on('data', (data) => {
+    parseRequest(data)
+    
+    socket.end()
+  })
+  
+  
+  socket.on("error", (err) => {
+    
+  })
+  
+})
+
+server.listen(8080)
